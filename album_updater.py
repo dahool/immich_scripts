@@ -3,10 +3,12 @@ import requests
 import os
 import json
 from datetime import datetime
+from dotenv import load_dotenv
+load_dotenv()
 
-API_KEY = '<API_KEY>'
-BASE_URL = 'http://localhost:2283/api'
-BASE_PATH = '/library'
+API_KEY = os.getenv('API_KEY')
+BASE_URL = os.getenv('BASE_URL')
+BASE_PATH = os.getenv('BASE_PATH')
 
 HEADERS = {
     'Content-Type': 'application/json',
